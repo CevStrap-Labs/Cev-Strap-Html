@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CevStrap - Custom Roblox Launcher</title>
   <style>
-    /* General Styles */
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -15,8 +14,6 @@
       color: #E0E0E0;
       overflow-x: hidden;
     }
-
-    /* Particle Background */
     #particles-js {
       position: fixed;
       width: 100%;
@@ -24,8 +21,6 @@
       background: radial-gradient(circle, #0A0A0A, #000000);
       z-index: -1;
     }
-
-    /* Header */
     header {
       position: relative;
       padding: 100px 20px;
@@ -34,7 +29,6 @@
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     header h1 {
       margin: 0;
       font-size: 4.5rem;
@@ -45,23 +39,15 @@
       -webkit-text-fill-color: transparent;
       animation: glow 2s infinite alternate;
     }
-
     header p {
       font-size: 1.5rem;
       color: #B0B0B0;
       margin-top: 20px;
     }
-
     @keyframes glow {
-      0% {
-        text-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
-      }
-      100% {
-        text-shadow: 0 0 40px rgba(0, 255, 136, 0.8);
-      }
+      0% { text-shadow: 0 0 20px rgba(30, 144, 255, 0.8); }
+      100% { text-shadow: 0 0 40px rgba(0, 255, 136, 0.8); }
     }
-
-    /* Container */
     .container {
       position: relative;
       max-width: 1200px;
@@ -74,8 +60,6 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       z-index: 1;
     }
-
-    /* Sections */
     h2 {
       color: #1E90FF;
       font-size: 3rem;
@@ -83,7 +67,6 @@
       margin-top: 60px;
       position: relative;
     }
-
     h2::after {
       content: '';
       display: block;
@@ -93,19 +76,15 @@
       margin-top: 15px;
       border-radius: 3px;
     }
-
     p {
       font-size: 1.2rem;
       color: #D0D0D0;
       line-height: 1.8;
     }
-
-    /* Features List */
     .features-list {
       list-style-type: none;
       padding: 0;
     }
-
     .features-list li {
       background: rgba(60, 63, 65, 0.4);
       backdrop-filter: blur(20px);
@@ -116,17 +95,13 @@
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .features-list li:hover {
       transform: translateY(-10px);
       box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
     }
-
     .features-list li strong {
       color: #1E90FF;
     }
-
-    /* Download Button */
     .download-button {
       display: inline-block;
       background: linear-gradient(135deg, #1E90FF, #00FF88);
@@ -140,13 +115,10 @@
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .download-button:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
     }
-
-    /* Footer */
     footer {
       position: relative;
       text-align: center;
@@ -158,51 +130,49 @@
       color: #B0B0B0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     footer a {
       color: #1E90FF;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-
     footer a:hover {
       color: #00FF88;
     }
-
-    /* Animations */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     .container, header, footer {
       animation: fadeIn 1.5s ease-out;
+    }
+    .wiki-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF6B6B, #FFA500);
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .wiki-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
 <body>
-  <!-- Particle Background -->
   <div id="particles-js"></div>
-
-  <!-- Header -->
   <header>
     <h1>CevStrap</h1>
     <p>Custom Roblox Launcher for Enhanced Gameplay and Development</p>
   </header>
-
-  <!-- Main Content -->
   <div class="container">
     <h2>Welcome to CevStrap</h2>
-    <p>
-      Welcome to <strong>CevStrap</strong>, the ultimate tool for customizing and enhancing your Roblox experience. Whether you're a developer, tester, or just a Roblox enthusiast, CevStrap offers a wide range of features to make your Roblox sessions more flexible and powerful.
-    </p>
-
+    <p>Welcome to <strong>CevStrap</strong>, the ultimate tool for customizing and enhancing your Roblox experience. Whether you're a developer, tester, or just a Roblox enthusiast, CevStrap offers a wide range of features to make your Roblox sessions more flexible and powerful.</p>
     <h2>Features</h2>
     <ul class="features-list">
       <li><strong>Custom Roblox Installation:</strong> Install Roblox in a custom directory (<code>CustomRoblox</code>) on your system.</li>
@@ -214,13 +184,12 @@
       <li><strong>Configuration Saving:</strong> Save your FastFlags and customization settings to a configuration file.</li>
       <li><strong>Logging and Feedback:</strong> View real-time logs of all actions performed in the application.</li>
     </ul>
-
     <h2>Download CevStrap</h2>
-    <p>
-      Ready to take control of your Roblox experience? Download the latest version of CevStrap now!
-    </p>
+    <p>Ready to take control of your Roblox experience? Download the latest version of CevStrap now!</p>
     <a href="https://github.com/CevStrap-Labs/Cev-Strap/releases/tag/Cev-Strap" class="download-button">Download CevStrap</a>
-
+    <h2>Wiki</h2>
+    <p>Explore the CevStrap Wiki to learn more about its features, usage, and advanced customization options.</p>
+    <a href="https://github.com/CevStrap-Labs/Cev-Strap-Html/wiki/Useful-Features" class="wiki-button">Visit the Wiki</a>
     <h2>How to Use</h2>
     <ol>
       <li><strong>Install Roblox:</strong> Use the "Install Roblox" tab to install Roblox in the <code>CustomRoblox</code> directory.</li>
@@ -230,32 +199,21 @@
       <li><strong>Launch Roblox Studio:</strong> Access Roblox Studio directly from the "Roblox Studio" tab.</li>
       <li><strong>Locate and Copy Files:</strong> Use the "Locate Files" and "Copy Files" tabs to manage your Roblox installation files.</li>
     </ol>
-
     <h2>System Requirements</h2>
     <ul>
       <li><strong>Operating System:</strong> Windows 10 or later</li>
       <li><strong>Python:</strong> Python 3.8 or later (if running from source)</li>
       <li><strong>Disk Space:</strong> At least 500 MB of free space for Roblox installation and additional files</li>
     </ul>
-
     <h2>Support and Feedback</h2>
-    <p>
-      If you encounter any issues or have suggestions for improvement, please open an issue on our <a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub repository</a>.
-    </p>
-
+    <p>If you encounter any issues or have suggestions for improvement, please open an issue on our <a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub repository</a>.</p>
     <h2>License</h2>
-    <p>
-      CevStrap is released under the <strong>MIT License</strong>. Feel free to modify and distribute the software as per the license terms.
-    </p>
+    <p>CevStrap is released under the <strong>MIT License</strong>. Feel free to modify and distribute the software as per the license terms.</p>
   </div>
-
-  <!-- Footer -->
   <footer>
-    <p>© 2025 CevStrap Labs. All rights reserved.</p>
     <p><a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub Repository</a></p>
+    <p>© 2025 CevStrap Labs. All rights reserved.</p>
   </footer>
-
-  <!-- Particle.js Script -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS.load('particles-js', 'particles.json', function() {
