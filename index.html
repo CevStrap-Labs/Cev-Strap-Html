@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CevStrap - Custom Roblox Launcher</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #1E1E1E;
+      color: #E0E0E0;
+    }
+    header {
+      background: linear-gradient(135deg, #3C3F41, #2E2E2E);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #B0B0B0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #2E2E2E;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      color: #1E90FF;
+      border-bottom: 2px solid #1E90FF;
+      padding-bottom: 10px;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+    a {
+      color: #1E90FF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0077CC;
+    }
+    .download-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #1E90FF, #0077CC);
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .download-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    }
+    .features-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .features-list li {
+      background-color: #3C3F41;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .features-list li strong {
+      color: #1E90FF;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #3C3F41;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #B0B0B0;
+    }
+    footer a {
+      color: #1E90FF;
+    }
+    footer a:hover {
+      color: #0077CC;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CevStrap</h1>
+    <p>Custom Roblox Launcher for Enhanced Gameplay and Development</p>
+  </header>
+
+  <div class="container">
+    <h2>Welcome to CevStrap</h2>
+    <p>
+      Welcome to <strong>CevStrap</strong>, the ultimate tool for customizing and enhancing your Roblox experience. Whether you're a developer, tester, or just a Roblox enthusiast, CevStrap offers a wide range of features to make your Roblox sessions more flexible and powerful.
+    </p>
+
+    <h2>Features</h2>
+    <ul class="features-list">
+      <li><strong>Custom Roblox Installation:</strong> Install Roblox in a custom directory (<code>CustomRoblox</code>) on your system.</li>
+      <li><strong>FastFlags Management:</strong> Add, remove, and manage <strong>FastFlags</strong> to enable or disable experimental features in Roblox.</li>
+      <li><strong>Multi-Instance Support:</strong> Launch multiple instances of Roblox simultaneously.</li>
+      <li><strong>Roblox Studio Integration:</strong> Launch <strong>Roblox Studio</strong> directly from the CevStrap interface.</li>
+      <li><strong>Customization Options:</strong> Customize the appearance of your Roblox client with personalized colors for the background, text, and buttons.</li>
+      <li><strong>File Management:</strong> Locate and copy Roblox installation files from your system's <code>AppData</code> directory.</li>
+      <li><strong>Configuration Saving:</strong> Save your FastFlags and customization settings to a configuration file.</li>
+      <li><strong>Logging and Feedback:</strong> View real-time logs of all actions performed in the application.</li>
+    </ul>
+
+    <h2>Download CevStrap</h2>
+    <p>
+      Ready to take control of your Roblox experience? Download the latest version of CevStrap now!
+    </p>
+    <a href="https://github.com/CevStrap-Labs/Cev-Strap/releases/tag/Cev-Strap" class="download-button">Download CevStrap</a>
+
+    <h2>How to Use</h2>
+    <ol>
+      <li><strong>Install Roblox:</strong> Use the "Install Roblox" tab to install Roblox in the <code>CustomRoblox</code> directory.</li>
+      <li><strong>Manage FastFlags:</strong> Add or remove FastFlags in the "FastFlags" tab to customize your Roblox client.</li>
+      <li><strong>Launch Multi-Instance:</strong> Use the "Multi-Instance" tab to launch multiple Roblox instances simultaneously.</li>
+      <li><strong>Customize Colors:</strong> Personalize your Roblox client's appearance in the "Customization" tab.</li>
+      <li><strong>Launch Roblox Studio:</strong> Access Roblox Studio directly from the "Roblox Studio" tab.</li>
+      <li><strong>Locate and Copy Files:</strong> Use the "Locate Files" and "Copy Files" tabs to manage your Roblox installation files.</li>
+    </ol>
+
+    <h2>System Requirements</h2>
+    <ul>
+      <li><strong>Operating System:</strong> Windows 10 or later</li>
+      <li><strong>Python:</strong> Python 3.8 or later (if running from source)</li>
+      <li><strong>Disk Space:</strong> At least 500 MB of free space for Roblox installation and additional files</li>
+    </ul>
+
+    <h2>Support and Feedback</h2>
+    <p>
+      If you encounter any issues or have suggestions for improvement, please open an issue on our <a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub repository</a>.
+    </p>
+
+    <h2>License</h2>
+    <p>
+      CevStrap is released under the <strong>MIT License</strong>. Feel free to modify and distribute the software as per the license terms.
+    </p>
+  </div>
+
+  <footer>
+    <p>©️ 2025 CevStrap Labs. All rights reserved.</p>
+    <p><a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub Repository</a></p>
+  </footer>
+</body>
+</html>
