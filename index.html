@@ -5,107 +5,198 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CevStrap - Custom Roblox Launcher</title>
   <style>
+    /* General Styles */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #1E1E1E;
+      background-color: #0A0A0A;
       color: #E0E0E0;
+      overflow-x: hidden;
     }
+
+    /* Particle Background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #0A0A0A, #000000);
+      z-index: -1;
+    }
+
+    /* Header */
     header {
-      background: linear-gradient(135deg, #3C3F41, #2E2E2E);
-      padding: 40px 20px;
+      position: relative;
+      padding: 100px 20px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      background: rgba(30, 30, 30, 0.2);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     header h1 {
       margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 4.5rem;
+      font-weight: 900;
       color: #FFFFFF;
+      background: linear-gradient(135deg, #1E90FF, #00FF88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
     }
+
     header p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #B0B0B0;
+      margin-top: 20px;
     }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+      }
+      100% {
+        text-shadow: 0 0 40px rgba(0, 255, 136, 0.8);
+      }
+    }
+
+    /* Container */
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #2E2E2E;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(46, 46, 46, 0.3);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1;
     }
+
+    /* Sections */
     h2 {
       color: #1E90FF;
-      border-bottom: 2px solid #1E90FF;
-      padding-bottom: 10px;
-      font-size: 2rem;
-      margin-top: 30px;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-top: 60px;
+      position: relative;
     }
-    a {
-      color: #1E90FF;
-      text-decoration: none;
-      transition: color 0.3s ease;
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 6px;
+      background: linear-gradient(135deg, #1E90FF, #00FF88);
+      margin-top: 15px;
+      border-radius: 3px;
     }
-    a:hover {
-      color: #0077CC;
-    }
-    .download-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #1E90FF, #0077CC);
-      color: #FFFFFF;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-align: center;
-      margin: 20px 0;
+
+    p {
       font-size: 1.2rem;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #D0D0D0;
+      line-height: 1.8;
     }
-    .download-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-    }
+
+    /* Features List */
     .features-list {
       list-style-type: none;
       padding: 0;
     }
+
     .features-list li {
-      background-color: #3C3F41;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      background: rgba(60, 63, 65, 0.4);
+      backdrop-filter: blur(20px);
+      margin: 20px 0;
+      padding: 25px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .features-list li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+
     .features-list li strong {
       color: #1E90FF;
     }
-    footer {
+
+    /* Download Button */
+    .download-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #1E90FF, #00FF88);
+      color: #FFFFFF;
+      padding: 20px 50px;
+      border-radius: 15px;
       text-align: center;
-      padding: 20px;
-      background-color: #3C3F41;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #B0B0B0;
+      margin: 40px 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .download-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(30, 30, 30, 0.3);
+      backdrop-filter: blur(20px);
+      margin-top: 100px;
+      font-size: 1rem;
+      color: #B0B0B0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     footer a {
       color: #1E90FF;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
+
     footer a:hover {
-      color: #0077CC;
+      color: #00FF88;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container, header, footer {
+      animation: fadeIn 1.5s ease-out;
     }
   </style>
 </head>
 <body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
   <header>
     <h1>CevStrap</h1>
     <p>Custom Roblox Launcher for Enhanced Gameplay and Development</p>
   </header>
 
+  <!-- Main Content -->
   <div class="container">
     <h2>Welcome to CevStrap</h2>
     <p>
@@ -158,9 +249,18 @@
     </p>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>©️ 2025 CevStrap Labs. All rights reserved.</p>
+    <p>© 2025 CevStrap Labs. All rights reserved.</p>
     <p><a href="https://github.com/CevStrap-Labs/Cev-Strap">GitHub Repository</a></p>
   </footer>
+
+  <!-- Particle.js Script -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('Particles loaded!');
+    });
+  </script>
 </body>
 </html>
